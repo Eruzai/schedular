@@ -26,7 +26,7 @@ export default function Form(props) {
     }
 
     if (interviewer === null) {
-      setError("You must choose an interviewer");
+      setError("Please select an interviewer");
       return;
     }
 
@@ -40,6 +40,7 @@ export default function Form(props) {
         <form autoComplete="off" onSubmit={event => event.preventDefault()}>
           <input
             className="appointment__create-input text--semi-bold"
+            data-testid="student-name-input"
             name="name"
             type="text"
             placeholder="Enter Student Name"
